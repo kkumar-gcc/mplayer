@@ -38,7 +38,7 @@
 				"@twind/preset-tailwind>typescript": "5"
 			}
 		}
-	}
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
