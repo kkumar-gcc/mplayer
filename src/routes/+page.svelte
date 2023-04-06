@@ -1,5 +1,5 @@
 <script>
-
+	import MPlayer from "$lib/MPlayer.svelte"
 </script>
 
 <svelte:head>
@@ -8,7 +8,7 @@
 </svelte:head>
 
 <section>
-
+	<MPlayer />
 </section>
 
 <style>
