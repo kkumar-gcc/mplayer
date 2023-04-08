@@ -11,3 +11,6 @@
  *     - Add music to playlist
  *     - Delete music from playlist
  */
+
+
+export default {}
