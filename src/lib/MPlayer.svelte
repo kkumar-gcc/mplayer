@@ -19,6 +19,9 @@
    * Mplayer core functionality
    */
   import mplayer from "$lib/mplayer.js";
+  import Latest from "./components/Latest.svelte";
+  import Playlists from "./components/Playlists.svelte";
+  import RecentPlayed from "./components/RecentPlayed.svelte";
 
   /**
    * Expiremental mplayer functionality
@@ -46,7 +49,7 @@
   let track;
   let currentMusic;
   onMount(async () => {
-    // import wavesurfer.js dynamically 
+    // import wavesurfer.js dynamically
     const WaveSurfer = (await import("wavesurfer.js")).default;
 
     audioElement = document.querySelector("audio");
@@ -102,11 +105,10 @@
       container: "#waveform",
       barWidth: 4,
       barHeight: 0.4, // the height of the wave
-      barGap:4,
+      barGap: 4,
       progressColor: "orange",
       waveColor: "purple",
-      height:30,
-      
+      height: 30,
     });
     wavesurfer.load(audio);
     wavesurfer.on("ready", function () {
@@ -166,6 +168,15 @@
   }
 </script>
 
+<div>
+  <Playlists />
+</div>
+<div>
+  <Latest />
+</div>
+<div>
+  <RecentPlayed />
+</div>
 <div class={tw("px-4 py-2")}>
   <h1 class={tw("text-2xl")}>MPlayer sample component</h1>
   <p>
@@ -196,7 +207,7 @@
 <div
   id="mplayer"
   class={tw(
-    "flex items-center fixed bottom-0 left-0 w-[98%] border rounded-xl p-4 m-3 shadow"
+    "flex items-center fixed bottom-0 left-0 w-[98%] border rounded-xl p-4 m-3 shadow bg-white overflow-x-scroll"
   )}
 >
   <!-- Loading audio from static folder, working -->
@@ -291,7 +302,7 @@
 
     <div class={tw("flex-1 h-20  flex items-center justify-start w-full")}>
       <!-- <div>Current song title being played</div> -->
-      <div id="waveform" class={tw("h-[30px] w-full flex-1")}/>
+      <div id="waveform" class={tw("h-[30px] flex-1")} />
       <!-- <div class={tw("flex items-center gap-2")}>
         <label for="panner-control" class={tw("text-sm")}>Panner</label>
         <input
