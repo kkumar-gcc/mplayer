@@ -11,7 +11,7 @@
     export let id = ''
 </script>
 
-<button type="button" {id} class={`button-neomorphism ${className} ${tw('grid place-items-center rounded-full outline-none')}`}>
+<button type="button" {id} class={`${className} ${tw('grid place-items-center rounded-full outline-none')}`}>
     <slot />
 </button>
 
