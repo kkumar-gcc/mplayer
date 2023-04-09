@@ -169,12 +169,15 @@
 </script>
 
 <div>
+  <!-- all playlists -->
   <Playlists />
 </div>
 <div>
+  <!-- latest songs  -->
   <Latest />
 </div>
 <div>
+  <!-- recently played songs  -->
   <RecentPlayed />
 </div>
 <div class={tw("px-4 py-2")}>
