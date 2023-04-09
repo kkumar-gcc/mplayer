@@ -12,14 +12,15 @@
         <!-- Logo -->
         <div class={tw("shrink-0 flex items-center")}>
           <a href="/home">
+             <!-- Replace this with ApplicationLogo component -->
             <ApplicationLogo class={tw("block h-16 w-auto fill-current text-skin-500")}  />
            </a>
         </div>
         <!-- Navigation Links -->
         <div class={tw("hidden space-x-8 sm:-my-px sm:ml-10 lg:flex")}>
-          <NavLink href="/home">Home</NavLink>
+          <!-- <NavLink href="/home">Home</NavLink>
           <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/about">About</NavLink>
+          <NavLink href="/about">About</NavLink> -->
         </div>
       </div>
 

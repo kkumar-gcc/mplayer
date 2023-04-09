@@ -1,5 +1,6 @@
 <script lang="ts">
   import { tw } from "$lib/twind.js";
+  export let recentlyPlayed = [];
 </script>
 
 <div>
@@ -7,7 +8,9 @@
     <a href="/blogs">Recently Played</a>
   </h3>
   <div class={tw("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4")}>
-    <!-- loop all cards  -->
+    {#each recentlyPlayed as song, index}
+		<li>{index}</li>
+	{/each}
   </div>
   <h2 class={tw("flex flex-col items-center justify-center mt-16")}>
     <svg
