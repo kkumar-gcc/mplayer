@@ -3,10 +3,11 @@
   let className = "";
   export { className as class };
 </script>
-
+<!-- change below p html tag with svg icon  -->
 <p class={className}>
     Logo
 </p>
+
 <!-- <svg
   version="1.2"
   xmlns="http://www.w3.org/2000/svg"
