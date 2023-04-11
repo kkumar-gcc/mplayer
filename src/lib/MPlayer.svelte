@@ -177,10 +177,10 @@
   <Latest />
 </div>
 <div>
-  <!-- recently played songs  -->
+  <!-- recently played songs -->
   <RecentPlayed />
 </div>
-<div class={tw("px-4 py-2")}>
+<!-- <div class={tw("px-4 py-2")}>
   <h1 class={tw("text-2xl")}>MPlayer sample component</h1>
   <p>
     Functionality based on MDN webaudio-examples <a
@@ -205,7 +205,7 @@
       our use case)
     </li>
   </ul>
-</div>
+</div> -->
 
 <div
   id="mplayer"

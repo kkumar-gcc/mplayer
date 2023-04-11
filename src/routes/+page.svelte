@@ -17,7 +17,7 @@
   <Navbar />
   <div
     class={tw(
-      "flex-1 w-full mt-2 text-gray-700 sm:mt-6 md:mt-16 mb-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      "flex-1 w-full mt-2 text-gray-700 sm:mt-6 md:mt-8 mb-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
     )}
   >
     <MPlayer />

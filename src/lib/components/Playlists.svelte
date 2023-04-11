@@ -1,15 +1,47 @@
 <script lang="ts">
   import { tw } from "$lib/twind.js";
-  export let playlists = [];
+  import PlayLists from "$lib/components/playlists.json";
+  import PrimaryCard from "./PrimaryCard.svelte";
+  export let playlists = PlayLists.items.slice(0, 4);
+
 </script>
 
 <div>
-  <h3 class={tw("py-3 text-2xl font-semibold text-gray-900 dark:text-white")}>
-    <a href="/blogs">Playlists</a>
-  </h3>
-  <div class={tw("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4")}>
+  <div class={tw("flex flex-row ")}>
+    <div class={tw("flex-1")}>
+      <h3
+        class={tw("py-3 text-2xl font-semibold text-gray-900 dark:text-white")}
+      >
+        <a href="/blogs">Playlists</a>
+      </h3>
+    </div>
+    <div>
+      <a
+        href="/blogs"
+        class={tw(
+          "py-3 text-base font-medium text-gray-600 dark:text-white inline-flex items-center"
+        )}
+      >
+        More
+        <svg
+          class={tw("w-5 h-5 ml-1")}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 350 480"
+          fill="currentColor"
+          ><title>right</title><path
+            d="M290 250l-180-190-30 30 150 160-150 150 30 30 180-180z"
+          /></svg
+        >
+      </a>
+    </div>
+  </div>
+  <div
+    class={tw(
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    )}
+  >
     {#each playlists as playlist, index}
-      <li>{index}</li>
+      <PrimaryCard item={playlist} />
     {/each}
   </div>
   <h2 class={tw("flex flex-col items-center justify-center mt-16")}>
